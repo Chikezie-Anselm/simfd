@@ -1,1 +1,73 @@
-.venv
+# --- OS / Editor ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# --- Logs / temp ---
+*.log
+*.tmp
+*.swp
+*.swo
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual envs
+.venv/
+venv/
+ENV/
+env/
+
+# Python tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- Flask app runtime / data artifacts ---
+# Local sqlite database
+flask-gsm-fraud-detection/*.sqlite3
+flask-gsm-fraud-detection/*.db
+
+# User uploads / generated predictions (can be large + noisy)
+flask-gsm-fraud-detection/data/uploads/
+
+# If you treat these as generated samples, ignore them too.
+# Uncomment if you don't want sample CSVs tracked.
+# flask-gsm-fraud-detection/data/*.csv
+
+# Model artifacts (often large)
+flask-gsm-fraud-detection/models/*.h5
+flask-gsm-fraud-detection/models/*.keras
+flask-gsm-fraud-detection/models/*.joblib
+flask-gsm-fraud-detection/models/*.pkl
+
+# --- Node / Next.js ---
+node_modules/
+.next/
+out/
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Next.js / npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Docker ---
+**/.docker/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
