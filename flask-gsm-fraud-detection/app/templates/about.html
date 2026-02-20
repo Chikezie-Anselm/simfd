@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}About - GSM Fraud Detection{% endblock %}
+
+{% block content %}
+  <div class="py-4">
+    <h2>About this project</h2>
+    <p>This academic demo demonstrates a pipeline for detecting potentially fraudulent GSM subscriber registrations using an artificial neural network. It includes:</p>
+    <ul>
+      <li>Data generation and synthetic labeling</li>
+      <li>Feature preprocessing and scaling</li>
+      <li>Model training with Keras (TensorFlow backend)</li>
+      <li>Simple web UI for batch predictions</li>
+    </ul>
+
+    <h5>References & further reading</h5>
+    <ol>
+      <li>Goodfellow, I., Bengio, Y., & Courville, A. Deep Learning. MIT Press.</li>
+      <li>Chandola, V., Banerjee, A., & Kumar, V. Anomaly Detection: A Survey. ACM Computing Surveys.</li>
+    </ol>
+  </div>
+{% endblock %}

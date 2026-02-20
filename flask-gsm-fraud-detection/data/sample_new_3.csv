@@ -1,0 +1,11 @@
+subscriber_id,subscriber_type,registration_date,age,income,location,is_fraud,IMEI,device_switch_count,fraud_probability,predicted_fraud,classification
+3021,prepaid,2025-06-10,42,5938,urban,0,411504524619488,3,0.119672,0,Legitimate
+3022,postpaid,2024-05-23,47,51578,rural,0,473011917652260,0,0.07749,0,Legitimate
+3023,postpaid,2024-01-22,41,23488,suburban,0,410196490834498,5,0.033479,0,Legitimate
+3024,prepaid,2024-06-09,35,18966,suburban,0,122083179369685,0,0.097276,0,Legitimate
+3025,prepaid,2025-10-12,29,8155,urban,0,067965266110322,5,0.059235,0,Legitimate
+3026,postpaid,2025-04-14,37,14562,urban,0,888109928991738,1,0.086377,0,Legitimate
+3027,postpaid,2024-07-30,34,24115,rural,0,532050917562191,1,0.048187,0,Legitimate
+3028,prepaid,2025-05-29,32,40366,suburban,0,964572310825022,4,0.094642,0,Legitimate
+3029,postpaid,2025-05-14,47,48904,rural,0,278072458731676,2,0.008818,0,Legitimate
+3030,postpaid,2025-04-07,20,11730,suburban,0,010555388795302,1,0.044791,0,Legitimate

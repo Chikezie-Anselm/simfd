@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block title %}Prediction Results{% endblock %}
+
+{% block content %}
+  <div class="py-3">
+    <h3>Prediction Results</h3>
+    <p class="text-muted">Total records: <strong>{{ total }}</strong> — Predicted frauds: <strong>{{ predicted_frauds }}</strong> — Average fraud probability: <strong>{{ '%.2f'|format(avg_prob*100) }}%</strong></p>
+
+    <div class="mb-3">
+      <a href="{{ url_for('home') }}" class="btn btn-outline-secondary btn-sm">Upload another CSV</a>
+    </div>
+
+    <div class="table-responsive">
+      {{ table_html | safe }}
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <canvas id="fraudChart" width="400" height="300"></canvas>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5>Summary</h5>
+            <p>Total: <strong>{{ total }}</strong></p>
+            <p>Fraud: <strong>{{ predicted_frauds }}</strong></p>
+            <p>Legitimate: <strong>{{ legit_count }}</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-4">
+      <h5>Notes</h5>
+      <ul>
+        <li>Classification threshold: 0.5 (probability ≥ 0.5 → fraud)</li>
+        <li>Results show first 200 rows for performance. Download the CSV from the uploads folder for full data.</li>
+      </ul>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block scripts %}
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Read counts from a safe DOM data attribute to avoid embedding Jinja braces inside JS
+    (function() {
+      const holder = document.createElement('div');
+      holder.id = 'fraud-data-holder';
+      holder.style.display = 'none';
+      holder.setAttribute('data-legit', '{{ legit_count }}');
+      holder.setAttribute('data-fraud', '{{ predicted_frauds }}');
+      document.body.appendChild(holder);
+
+      const ctx = document.getElementById('fraudChart').getContext('2d');
+      const legit = Number(holder.getAttribute('data-legit')) || 0;
+      const fraud = Number(holder.getAttribute('data-fraud')) || 0;
+
+      const chartData = {
+        labels: ['Legitimate', 'Fraud'],
+        datasets: [{
+          data: [legit, fraud],
+          backgroundColor: ['#28a745', '#dc3545']
+        }]
+      };
+
+      const config = {
+        type: 'pie',
+        data: chartData,
+        options: {
+          responsive: true,
+          plugins: { legend: { position: 'bottom' } }
+        }
+      };
+
+      new Chart(ctx, config);
+    })();
+  </script>
+{% endblock %}

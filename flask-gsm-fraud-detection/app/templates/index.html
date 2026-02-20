@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}GSM Subscription Fraud Detection System{% endblock %}
+
+{% block content %}
+  <div class="py-4 text-center">
+    <h1 class="display-6">GSM Subscription Fraud Detection System</h1>
+    <p class="lead">Upload a subscriber CSV to predict fraud probability per registration.</p>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h5 class="card-title">Upload CSV</h5>
+      <form method="post" action="{{ url_for('upload') }}" enctype="multipart/form-data">
+        <div class="mb-3">
+          <input class="form-control" type="file" id="file" name="file" accept=".csv" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Upload & Predict</button>
+      </form>
+      <small class="form-text text-muted mt-2">CSV must include subscriber_id, IMEI, registration_date, location, initial_call_count, average_call_duration, device_switch_count</small>
+    </div>
+  </div>
+
+  <div id="about" class="card">
+    <div class="card-body">
+      <h5 class="card-title">About</h5>
+      <p>This demo project trains an artificial neural network to flag potentially fraudulent GSM subscriber registrations. The model uses behavioral signals such as call counts, average durations, and device-switch frequency.</p>
+      <a href="{{ url_for('home') }}#" class="btn btn-outline-secondary btn-sm">Learn more</a>
+    </div>
+  </div>
+
+{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSM Fraud Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>GSM Subscriber Fraud Detection</h1>
+        <form action="/predict" method="post">
+            <label for="subscriber_data">Enter Subscriber Data:</label>
+            <textarea id="subscriber_data" name="subscriber_data" rows="10" cols="30" required></textarea>
+            <button type="submit">Check for Fraud</button>
+        </form>
+        {% if prediction is not none %}
+            <h2>Prediction Result: {{ prediction }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>

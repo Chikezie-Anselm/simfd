@@ -1,0 +1,12 @@
+Here are the contents for the file: /flask-gsm-fraud-detection/flask-gsm-fraud-detection/data/sample_data.csv,fraud_probability,predicted_fraud,classification
+is_fraud,0.11236203565420874,0,Legitimate
+0,0.2852142919229748,0,Legitimate
+1,0.21959818254342153,0,Legitimate
+0,0.17959754525911098,0,Legitimate
+1,0.04680559213273095,0,Legitimate
+0,0.04679835610086079,0,Legitimate
+1,0.017425083650459836,0,Legitimate
+0,0.2598528437324805,0,Legitimate
+1,0.18033450352296262,0,Legitimate
+0,0.21242177333881365,0,Legitimate
+1,0.006175348288740734,0,Legitimate

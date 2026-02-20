@@ -1,0 +1,11 @@
+Subscriber ID,IMEI,Fraud Probability,Classification,Location,Device Switches
+sub_031,imei_1031,0.95,Fraud,Lagos,7
+sub_032,imei_1032,0.07,Legitimate,Enugu,0
+sub_033,imei_1033,0.34,Legitimate,Ibadan,1
+sub_034,imei_1034,0.49,Legitimate,Port Harcourt,1
+sub_035,imei_1035,0.77,Fraud,Kano,3
+sub_036,imei_1036,0.61,Fraud,Abuja,2
+sub_037,imei_1037,0.20,Legitimate,Kaduna,0
+sub_038,imei_1038,0.88,Fraud,Lagos,6
+sub_039,imei_1039,0.11,Legitimate,Enugu,0
+sub_040,imei_1040,0.53,Fraud,Ibadan,2

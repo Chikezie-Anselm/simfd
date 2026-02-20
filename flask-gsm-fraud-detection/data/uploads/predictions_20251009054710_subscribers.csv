@@ -1,0 +1,6 @@
+subscriber_id,IMEI,registration_date,call_duration_avg,sms_count,data_usage_mb,topup_frequency,complaints_filed,region,fraud_label,is_fraud,fraud_probability,predicted_fraud,classification
+10001,356938035643809,2025-01-04,180,45,500,12,0,North,0,1.0,0.9568653,1,Fraud
+10002,352099001761481,2025-01-07,25,2,20,1,0,East,1,1.0,0.70455885,1,Fraud
+10003,358240051111110,2025-01-09,240,80,900,15,1,South,0,0.0,0.047402672,0,Legitimate
+10004,356938035643822,2025-01-11,10,0,5,0,0,West,1,1.0,0.91937286,1,Fraud
+10005,358240051111137,2025-01-13,130,35,400,9,0,North,0,,0.04925979,0,Legitimate

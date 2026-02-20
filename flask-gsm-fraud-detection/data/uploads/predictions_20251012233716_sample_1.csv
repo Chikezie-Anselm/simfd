@@ -1,0 +1,11 @@
+subscriber_id,subscriber_type,registration_date,age,income,location,is_fraud,IMEI,device_switch_count,fraud_probability,predicted_fraud,classification
+1,prepaid,2023-01-01,27,23560,rural,1,828156658889710,1,0.65425783,1,Fraud
+2,prepaid,2023-07-03,45,30212,urban,1,373805255882267,6,2.4674447e-11,0,Legitimate
+3,postpaid,2023-11-12,21,73174,urban,1,564064472285798,1,4.1449718e-19,0,Legitimate
+4,postpaid,2023-04-01,33,76662,suburban,0,179994828481920,3,7.4112877e-06,0,Legitimate
+5,postpaid,2023-08-27,20,16314,suburban,0,870678429989965,8,1.4216047e-14,0,Legitimate
+6,postpaid,2023-02-05,65,72101,suburban,1,953925911061283,8,0.0127003435,0,Legitimate
+7,postpaid,2023-08-27,70,41155,suburban,1,733621685736736,1,1.4216047e-14,0,Legitimate
+8,prepaid,2023-11-29,42,86246,rural,0,162998110905099,7,4.1326706e-20,0,Legitimate
+9,postpaid,2023-06-14,61,63835,rural,1,731878517113079,0,3.245922e-10,0,Legitimate
+10,postpaid,2023-07-28,69,49671,suburban,1,227733455382588,8,8.313121e-13,0,Legitimate
